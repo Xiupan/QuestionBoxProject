@@ -5,9 +5,9 @@ During this project, you will build a question and answer platform with Ruby on 
 
 ### On the first day, your application should:
 
-Allow a user to create a question. That question should allow for several paragraphs of text as well as code samples. We recommend allowing users to use Markdown for authoring questions. Redcarpet is a good gem for rendering Markdown as HTML. This blog post may help as well.
-Be styled with Bootstrap or another CSS framework.
-Paginate the index of questions with Kaminari
+Allow a user to create a question. That question should allow for several paragraphs of text as well as code samples. We recommend allowing users to use Markdown for authoring questions. ~Redcarpet is a good gem for rendering Markdown as HTML.~ This blog post may help as well.
+Be styled with ~Bootstrap~ or another CSS framework.
+~Paginate the index of questions with Kaminari~
 
 ### On the second day, your application should:
 
