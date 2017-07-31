@@ -2,6 +2,11 @@
 
 <%= form_for :question, url: questions_path do |q| %>
   <p>
+    <%= q.label :title %><br>
+    <%= q.text_field :title %>
+  </p>
+
+  <p>
     <%= q.label :text %><br>
     <%= q.text_area :text %>
   </p>

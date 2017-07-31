@@ -1,0 +1,11 @@
+<h1>The new question you just added</h1>
+
+<p>
+  <strong>Title:</strong>
+  <%= @question.title %>
+</p>
+
+<p>
+  <% markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true) %>
+  <%= markdown.render(@question.text).html_safe %>
+</p>
