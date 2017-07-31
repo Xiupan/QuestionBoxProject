@@ -8,8 +8,11 @@
 
 <% @questions.each do |question| %>
   <tr>
+    <% markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true) %>
     <td><%= question.title %></td>
-    <td><%= question.text %></td>
+    <td>
+      <%= markdown.render(question.text).html_safe %>
+    </td>
   </tr>
 <% end %>
 </table>
