@@ -1,18 +1,4 @@
 Rails.application.routes.draw do
-  get 'answers/index'
-
-  get 'answers/create'
-
-  get 'answers/new'
-
-  get 'answers/edit'
-
-  get 'answers/show'
-
-  get 'answers/update'
-
-  get 'answers/destroy'
-
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # get 'home/welcome'
   #
@@ -22,8 +8,8 @@ Rails.application.routes.draw do
   #
   # get 'questions/index'
   root 'home#index'
-  resources :questions
-  resources :answers
+  resources :questions do resources :answers
+  end
   resources :users
   get 'sessions/new' => 'sessions#new', as: :login
   post 'sessions/new' => 'sessions#create'

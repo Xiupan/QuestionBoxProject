@@ -1,14 +1,14 @@
-<h1>The new question you just added</h1>
-
-<p>
+<h2>
   <strong>Title:</strong>
   <%= @question.title %>
-</p>
+</h2>
 
 <p>
   <% markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true) %>
   <%= markdown.render(@question.text).html_safe %>
 </p>
+
+<p><%= link_to 'Submit a new Answer', new_question_answer_path(@question) %></p>  
 
 <p>
   <strong>Answers:</strong>

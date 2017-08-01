@@ -4,10 +4,12 @@ class AnswersController < ApplicationController
 
   def create
     @answer = Answer.new(answer_params)
+    @answer.question_id = params[:question_id]
     @answer.user_id = session[:user_id]
 
     if @answer.save!
-      redirect_to @answer
+      # FIXME: Should go back to question tied to this new answer
+      redirect_to root_path
     else
       render :new
     end
