@@ -11,7 +11,8 @@ Be styled with ~Bootstrap~ or another CSS framework.
 
 ### On the second day, your application should:
 
-Have registration and login. Every question and answer will be associated with a user.
+Have registration and login.
+Every question and answer will be associated with a user.
 Allow questions to have answers.
 Allow the original author of the question to mark an answer as correct.
 
