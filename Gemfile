@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'redcarpet'
 gem 'kaminari'
-gem 'bootstrap'
+gem 'bootstrap-sass'
 # rails_admin for development only. Also check routes and controllers for any residual things it adds.
 gem 'rails_admin'
 
