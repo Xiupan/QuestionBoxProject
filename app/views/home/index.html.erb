@@ -9,7 +9,7 @@
 <% @questions.each do |question| %>
   <tr>
     <% markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true) %>
-    <td><%= question.title %></td>
+    <td><%= link_to question.title, question_path(question) %></td>
     <td>
       <%= markdown.render(question.text).html_safe %>
     </td>

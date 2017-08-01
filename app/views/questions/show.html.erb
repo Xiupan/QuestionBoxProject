@@ -9,3 +9,11 @@
   <% markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true) %>
   <%= markdown.render(@question.text).html_safe %>
 </p>
+
+<p>
+  <strong>Answers:</strong>
+  <% @answers.each do |answer| %>
+    <h3>Answer by: <%= answer.user.username %></h3>
+    <p><%= answer.text %></p>
+  <% end %>
+</p>

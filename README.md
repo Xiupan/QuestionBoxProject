@@ -11,9 +11,9 @@ Be styled with ~Bootstrap~ or another CSS framework.
 
 ### On the second day, your application should:
 
-Have registration and login.
-Every question and answer will be associated with a user.
-Allow questions to have answers.
+~Have registration and login.~
+~Every question and answer will be associated with a user.~
+~Allow questions to have answers.~
 Allow the original author of the question to mark an answer as correct.
 
 ### On the third day, your application should have a JSON API that:
@@ -23,7 +23,8 @@ Allows an authenticated user to create a question or answer an existing question
 Allows the author of a question to mark an answer as valid.
 Allows the author of a question to delete that question, removing all answers.
 Allows the author of an answer to delete that answer.
-Added features  
+
+##Added features  
 
 These added features are for two purposes. You can complete some of them if you finish all of the above. The other purpose is for instructors who wish to run this project as a group project. In that case, these features should be assigned to people in the group.
 
