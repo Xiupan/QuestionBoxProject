@@ -10,21 +10,6 @@
 
 <p><%= link_to 'Submit a new Answer', new_question_answer_path(@question) %></p>
 
-<% if false #comment out %>
-<p>
-  <strong>Answers:</strong>
-  <% @answers.each do |answer| %>
-    <h3>Answer by: <%= answer.user.username %></h3>
-    <% if false #this is to comment out the following code block %>
-    <% if @question.user_id === session[:user_id] %>
-      <%= link_to 'Mark as Correct', controller: "answers", action: "update", id: @question.answers_id %>
-    <% end %>
-    <% end #end of comment %>
-    <p><%= answer.text %></p>
-  <% end %>
-</p>
-<% end %>
-
 <p>
   <strong>Answers:</strong>
   <% @answers.each do |answer| %>
