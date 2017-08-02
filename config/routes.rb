@@ -3,10 +3,13 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
+  get 'api/' => 'api#index'
+  post 'api/question/new' => 'api#create'
+
   resources :questions do resources :answers
   end
   resources :users
-  
+
   get 'sessions/new' => 'sessions#new', as: :login
   post 'sessions/new' => 'sessions#create'
   delete 'sessions' => 'sessions#destroy', as: :logout
