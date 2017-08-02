@@ -3,6 +3,11 @@
 
 During this project, you will build a question and answer platform with Ruby on Rails. After three days, your platform will allow people to ask questions, receive answers, and mark an answer as valid.
 
+###Schema:
+  Users:
+  Questions: child of Users
+  Answers: child of Users, child of Questions
+
 ### On the first day, your application should:
 
 ~Allow a user to create a question.~ ~That question should allow for several paragraphs of text as well as code samples.~ We recommend allowing users to use Markdown for authoring questions. ~Redcarpet is a good gem for rendering Markdown as HTML.~ This blog post may help as well.
