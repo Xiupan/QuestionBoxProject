@@ -25,6 +25,8 @@ class AnswersController < ApplicationController
   end
 
   def update
+    @answer = Answer.find(params[:id])
+    @answer.correct = true
   end
 
   def destroy
