@@ -10,6 +10,7 @@
 
 <p><%= link_to 'Submit a new Answer', new_question_answer_path(@question) %></p>
 
+<% if false #comment out %>
 <p>
   <strong>Answers:</strong>
   <% @answers.each do |answer| %>
@@ -20,5 +21,22 @@
     <% end %>
     <% end #end of comment %>
     <p><%= answer.text %></p>
+  <% end %>
+</p>
+<% end %>
+
+<p>
+  <strong>Answers:</strong>
+  <% @answers.each do |answer| %>
+    <% if answer.question_id === @question.id %>
+      <h3>Answer by: <%= answer.user.username %></h3>
+      <% if answer.correct === true %>
+      <p>The question's author has marked this answer as correct.</p>
+      <% end %>
+      <p><%= answer.text %></p>
+      <% if answer.correct === false %>
+      <%= link_to 'Mark as Correct', question_answer_path(question_id: answer.question_id, id: answer.id), method: :patch %>
+      <% end %>
+    <% end %>
   <% end %>
 </p>
