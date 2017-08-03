@@ -3,8 +3,9 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  get 'api/' => 'api#index'
-  post 'api/question/new' => 'api#create'
+  namespace :api do
+    get 'questions' => 'questions#index'
+  end
 
   resources :questions do resources :answers
   end
