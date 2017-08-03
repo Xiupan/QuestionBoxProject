@@ -23,7 +23,7 @@ Be styled with ~Bootstrap~ or another CSS framework.
 
 ### On the third day, your application should have a JSON API that:
 
-Allows an unauthenticated user to view questions and answers.
+~Allows an unauthenticated user to view questions and answers.~
 Allows an authenticated user to create a question or answer an existing question.
 Allows the author of a question to mark an answer as valid.
 Allows the author of a question to delete that question, removing all answers.
