@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     get 'questions' => 'questions#index'
     post 'questions/new' => 'questions#create'
     post 'answers/new' => 'answers#create'
+    post 'answer/correct/:id' => 'answers#markCorrect'
   end
 
   resources :questions do resources :answers
