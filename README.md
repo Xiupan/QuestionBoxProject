@@ -25,7 +25,7 @@ Be styled with ~Bootstrap~ or another CSS framework.
 
 ~Allows an unauthenticated user to view questions and answers.~
 ~Allows an authenticated user to create a question or answer an existing question.~
-Allows the author of a question to mark an answer as valid.
+~Allows the author of a question to mark an answer as valid.~
 Allows the author of a question to delete that question, removing all answers.
 Allows the author of an answer to delete that answer.
 

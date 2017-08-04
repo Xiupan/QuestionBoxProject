@@ -11,7 +11,7 @@ class Api::QuestionsController < Api::ApiController
     if @question.save!
       head :created
     else
-      render json: {errors: @person.errors}, status: 422
+      render json: {message: 'Question not created.'}, status: 422
     end
   end
 
@@ -20,7 +20,9 @@ class Api::QuestionsController < Api::ApiController
   end
 
   def destroy
-
+    @question = Question.find(params[:id])
+    @question.destroy
+    head :ok
   end
 
   private

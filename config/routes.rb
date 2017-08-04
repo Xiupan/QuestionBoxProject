@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     post 'questions/new' => 'questions#create'
     post 'answers/new' => 'answers#create'
     post 'answer/correct/:id' => 'answers#markCorrect'
+    delete 'question/:id/delete' => 'questions#destroy'
   end
 
   resources :questions do resources :answers

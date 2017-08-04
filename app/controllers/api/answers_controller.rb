@@ -8,7 +8,7 @@ class Api::AnswersController < Api::ApiController
     if @answer.save!
       head :created
     else
-      render json: {errors: @person.errors}, status: 422
+      render json: {message: 'Answer not created.'}, status: 422
     end
   end
 
@@ -19,7 +19,7 @@ class Api::AnswersController < Api::ApiController
     if @answer.save!
       head :created
     else
-      render json: {errors: @person.errors}, status: 422
+      render json: {message: 'Answer not marked as correct.'}, status: 422
     end
   end
 
