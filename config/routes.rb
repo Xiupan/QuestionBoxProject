@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   namespace :api do
     get 'questions' => 'questions#index'
     post 'questions/new' => 'questions#create'
+    post 'answers/new' => 'answers#create'
   end
 
   resources :questions do resources :answers
