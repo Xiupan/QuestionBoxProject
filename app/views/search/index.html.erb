@@ -1,0 +1,6 @@
+<h1>All the Questions</h1>
+
+<%= form_tag (questions_path) do %>
+  <%= text_field_tag :query, '', placeholder: "Search questions..." %>
+  <%= submit_tag 'Search' %>
+<% end %>

@@ -1,4 +1,12 @@
 class QuestionsController < ApplicationController
+  def index
+    if params[:query].present?
+      @questions = Question.search(params[:query])
+    else
+      @questions = Question.all
+    end
+  end
+
   def new
 
   end
@@ -16,7 +24,7 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
-    
+
     # FIXME
     @answers = Answer.all
   end

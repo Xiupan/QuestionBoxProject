@@ -1,2 +1,22 @@
-<h1>Questions#index</h1>
-<p>Find me in app/views/questions/index.html.erb</p>
+<h1>Questions Search Result</h1>
+
+<table>
+<tr>
+  <th>Title</th>
+  <th>Text</th>
+  <th>Author</th>
+</tr>
+
+<% @questions.each do |question| %>
+  <tr>
+    <% markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true) %>
+    <td><%= link_to question.title, question_path(question) %></td>
+    <td>
+      <%= markdown.render(question.text).html_safe %>
+    </td>
+    <td>
+      <%= question.user.username %>
+    </td>
+  </tr>
+<% end %>
+</table>

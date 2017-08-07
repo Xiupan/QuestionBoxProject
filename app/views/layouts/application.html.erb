@@ -19,6 +19,11 @@
         <%= link_to 'Register', new_user_path %> |
         <%= link_to 'Login', login_path %>
       <% end %>
+      <%= form_tag(questions_path, method: "get") do %>
+        <%= label_tag(:query, "Search for:") %>
+        <%= text_field_tag(:query) %>
+        <%= submit_tag("Search") %>
+      <% end %>
     </h3>
   </header>
   <body>

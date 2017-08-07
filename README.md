@@ -31,8 +31,9 @@ Allows the author of an answer to delete that answer.
 
 ### Day four:
 
+~Switch to PostgreSQL DB.~
 Take your Question Box application you worked on previously and add pagination to each index of questions. There should be at least one on the front page, and one for each tag if you implemented tags.
-Then add search using pg_search, allowing users to search through the text of questions and answers.
+~Then add search using pg_search, allowing users to search through the text of questions and answers.~
 
 ##Added features  
 
