@@ -1,11 +1,13 @@
 class QuestionsController < ApplicationController
   def index
     if params[:query].present?
-      @questions = Question.search(params[:query])
+      @questions = Question.search(params[:query]).page(params[:page]).per(10)
     else
-      @questions = Question.all
+      @questions = Question.page(params[:page]).per(10)
     end
   end
+
+  # @posts = Post.page(params[:page]).per(10)
 
   def new
 
