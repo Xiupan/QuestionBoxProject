@@ -12,12 +12,15 @@
 
 ActiveRecord::Schema.define(version: 20170803182633) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "answers", force: :cascade do |t|
     t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
-    t.integer "question_id"
+    t.bigint "user_id"
+    t.bigint "question_id"
     t.boolean "correct", default: false
     t.index ["question_id"], name: "index_answers_on_question_id"
     t.index ["user_id"], name: "index_answers_on_user_id"
@@ -28,7 +31,7 @@ ActiveRecord::Schema.define(version: 20170803182633) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "title"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_questions_on_user_id"
   end
 
@@ -40,4 +43,7 @@ ActiveRecord::Schema.define(version: 20170803182633) do
     t.string "api_token"
   end
 
+  add_foreign_key "answers", "questions"
+  add_foreign_key "answers", "users"
+  add_foreign_key "questions", "users"
 end
