@@ -29,6 +29,11 @@ Be styled with ~Bootstrap~ or another CSS framework.
 Allows the author of a question to delete that question, removing all answers.
 Allows the author of an answer to delete that answer.
 
+### Day four:
+
+Take your Question Box application you worked on previously and add pagination to each index of questions. There should be at least one on the front page, and one for each tag if you implemented tags.
+Then add search using pg_search, allowing users to search through the text of questions and answers.
+
 ##Added features  
 
 These added features are for two purposes. You can complete some of them if you finish all of the above. The other purpose is for instructors who wish to run this project as a group project. In that case, these features should be assigned to people in the group.
